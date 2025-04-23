@@ -69,16 +69,16 @@ if user_input:
             st.success(valborg_svar[nyckel])
             hittat = True
             break
-   if not hittat:
-    st.warning(
-        "Oj, jag har inte det svaret just nu! 🤔\n\n"
-        "Men du kan till exempel fråga:\n"
-        "- Varför firar vi Valborg?\n"
-        "- Vad händer i Uppsala på Valborg?\n"
-        "- Är det tillåtet med fyrverkerier?\n"
-        "- Hur var vädret på Valborg i fjol?\n\n"
-        "Testa igen! 🌟"
-    )
+    if not hittat:
+        st.warning(
+            "Oj, jag har inte det svaret just nu! 🤔\n\n"
+            "Men du kan till exempel fråga:\n"
+            "- Varför firar vi Valborg?\n"
+            "- Vad händer i Uppsala på Valborg?\n"
+            "- Är det tillåtet med fyrverkerier?\n"
+            "- Hur var vädret på Valborg i fjol?\n\n"
+            "Testa igen! 🌟"
+        )
 
 
 st.markdown("---")

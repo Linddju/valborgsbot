@@ -66,13 +66,15 @@ if user_input:
             bästa_match = nyckel
 
     if högsta_poäng >= 70:
-        if bästa_match == "__kodfirande__":
-            st.markdown("Vi firar Valborg med kod, förstås! 🎉🧑‍💻")
-            st.markdown("```python\nprint('Glad Valborg!')\n```")
-            st.markdown("```javascript\nconsole.log('Glad Valborg!');\n```")
-            st.markdown("```rust\nprintln!(\"Glad Valborg!\");\n```")
-        else:
-            st.success(valborg_svar[bästa_match])
+        if högsta_poäng >= 70:
+    if valborg_svar[bästa_match] == "__kodfirande__":
+        st.markdown("Vi firar Valborg med kod, förstås! 🎉🧑‍💻")
+        st.markdown("```python\nprint('Glad Valborg!')\n```")
+        st.markdown("```javascript\nconsole.log('Glad Valborg!');\n```")
+        st.markdown("```rust\nprintln!(\"Glad Valborg!\");\n```")
+    else:
+        st.success(valborg_svar[bästa_match])
+
     else:
         st.warning(
             "Jag är inte helt säker på vad du menar 🤔\n\n"

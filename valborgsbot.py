@@ -17,6 +17,7 @@ Här är exempel på hur du kan ställa din fråga:
 - Har Valborg något med häxor att göra?
 - Vad är champagnegalopp?
 - Vad säger man på Valborg?
+- Hur firar programmerare valborg)
 """)
 
 valborg_svar = {
@@ -49,6 +50,8 @@ valborg_svar = {
     "vad säger man på valborg": "'Glad Valborg!' är ett säkert kort. Eller bara: 'Har du tändare?' 😄",
     "kan man kombinera valborg med kodning": "Ja! Exakt vad du gör just nu. Kod + choklad + vårfeeling = ❤️",
     "hur kommer vädret bli på valborg": "Jag är ingen meteorolog, men oddsen säger: 40% regn, 60% hopp! Ta med paraply – och kanske solglasögon, för säkerhets skull. ☂️😎"
+    "hur firar programmerare valborg": "Vi firar Valborg med kod, förstås!\n\n```python\nprint('Glad Valborg!')\n```\n```javascript\nconsole.log('Glad Valborg!');\n```\n```rust\nprintln!(\"Glad Valborg!\");\n```",  # 👇 Ny fråga!
+    
 }
 
 user_input = st.text_input("Ställ din fråga:")

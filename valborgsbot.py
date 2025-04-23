@@ -5,7 +5,9 @@ st.set_page_config(page_title="Valborgsbot 🔥", page_icon="🔥")
 st.title("🔥 Valborgsbot – din digitala vårbrasa-guide")
 st.subheader("Vi lät AI fira Valborg – så här gick det... 😄")
 
-st.write("Fråga mig något om Valborg! Jag kan mycket om traditioner, firande och historia. 🔥")
+st.write("Fråga mig något om Valborg! Här är några exempel:")
+st.markdown("- När tänds brasan?\n- Var firas Valborg?\n- Varför firar vi Valborg?\n- Tips för att fira?\n- Vad händer i Uppsala på Valborg?\n- Är det tillåtet med fyrverkerier?\n- Vad betyder Valborg?\n- Hur var vädret på Valborg i fjol?")
+
 
 valborg_svar = {
     # Ursprungliga
@@ -52,8 +54,17 @@ if user_input:
             st.success(valborg_svar[nyckel])
             hittat = True
             break
-    if not hittat:
-        st.info("Jag vet inte riktigt... kanske är det något bara våren själv kan svara på. 🌸")
+   if not hittat:
+    st.warning(
+        "Oj, jag har inte det svaret just nu! 🤔\n\n"
+        "Men du kan till exempel fråga:\n"
+        "- Varför firar vi Valborg?\n"
+        "- Vad händer i Uppsala på Valborg?\n"
+        "- Är det tillåtet med fyrverkerier?\n"
+        "- Hur var vädret på Valborg i fjol?\n\n"
+        "Testa igen! 🌟"
+    )
+
 
 st.markdown("---")
 st.caption("Byggd med ❤️ av [@digitalalyftet.se](https://digitalalyftet.se)")

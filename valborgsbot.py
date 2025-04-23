@@ -56,6 +56,8 @@ valborg_svar = {
     "hur klär man sig på valborg": "Lager på lager. Optimisten tar vårjacka. Realisten tar dunjacka. 🧥❄️",
     "vad säger man på valborg": "'Glad Valborg!' är ett säkert kort. Eller bara: 'Har du tändare?' 😄",
     "kan man kombinera valborg med kodning": "Ja! Exakt vad du gör just nu. Kod + choklad + vårfeeling = ❤️"
+    "hur kommer vädret bli på valborg": "Jag är ingen meteorolog, men oddsen säger: 40% regn, 60% hopp! Ta med paraply – och kanske solglasögon, för säkerhets skull. ☂️😎",
+
 }
 
 

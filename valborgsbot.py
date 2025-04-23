@@ -1,4 +1,5 @@
 import streamlit as st
+from fuzzywuzzy import fuzz
 
 st.set_page_config(page_title="Valborgsbot 🔥", page_icon="🔥")
 
@@ -11,18 +12,12 @@ Här är exempel på hur du kan ställa din fråga:
 - När tänds brasan på Valborg?
 - Var firas Valborg i Sverige?
 - Varför firar vi Valborg egentligen?
-- Har Valborg något med häxor att göra?
 - Vad händer i Uppsala under Valborg?
-- Kan man ha fyrverkerier på Valborg?
-- Hur var vädret på Valborg förra året?
-- Vad betyder Valborg?
-- Hur kommer vädret bli på Valborg i år?
+- Hur kommer vädret bli på Valborg?
+- Har Valborg något med häxor att göra?
 - Vad är champagnegalopp?
-- Är Valborg en helgdag?
-- Vad ska man äta på Valborg?
-- Får man ta med hund till Valborgsbrasan?
+- Vad säger man på Valborg?
 """)
-
 
 valborg_svar = {
     "när tänds brasan": "Brasan tänds ofta vid skymning – runt kl. 20–21, men det kan variera lokalt.",
@@ -60,22 +55,26 @@ user_input = st.text_input("Ställ din fråga:")
 
 if user_input:
     fråga = user_input.lower()
-    hittat = False
+    bästa_match = None
+    högsta_poäng = 0
+
     for nyckel in valborg_svar:
-        if nyckel in fråga:
-            st.success(valborg_svar[nyckel])
-            hittat = True
-            break
-    if not hittat:
+        poäng = fuzz.partial_ratio(fråga, nyckel)
+        if poäng > högsta_poäng:
+            högsta_poäng = poäng
+            bästa_match = nyckel
+
+    if högsta_poäng >= 70:
+        st.success(valborg_svar[bästa_match])
+    else:
         st.warning(
-            "Oj, jag har inte det svaret just nu! 🤔\n\n"
+            "Jag är inte helt säker på vad du menar 🤔\n\n"
             "Men du kan till exempel fråga:\n"
             "- Varför firar vi Valborg?\n"
-            "- Vad händer i Uppsala på Valborg?\n"
-            "- Hur var vädret på Valborg i fjol?\n"
-            "- Vad är champagnegalopp?\n"
+            "- Hur kommer vädret bli på Valborg?\n"
+            "- Vad händer i Uppsala?\n"
             "- Vad säger man på Valborg?\n\n"
-            "Testa igen! 🌟"
+            "Testa gärna igen! 🌟"
         )
 
 st.markdown("---")

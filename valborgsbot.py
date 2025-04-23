@@ -14,10 +14,9 @@ Här är exempel på hur du kan ställa din fråga:
 - Varför firar vi Valborg egentligen?
 - Vad händer i Uppsala under Valborg?
 - Hur kommer vädret bli på Valborg?
-- Har Valborg något med häxor att göra?
 - Vad är champagnegalopp?
 - Vad säger man på Valborg?
-- Hur firar programmerare valborg)
+- Hur firar programmerare Valborg?
 """)
 
 valborg_svar = {
@@ -49,9 +48,8 @@ valborg_svar = {
     "hur klär man sig på valborg": "Lager på lager. Optimisten tar vårjacka. Realisten tar dunjacka. 🧥❄️",
     "vad säger man på valborg": "'Glad Valborg!' är ett säkert kort. Eller bara: 'Har du tändare?' 😄",
     "kan man kombinera valborg med kodning": "Ja! Exakt vad du gör just nu. Kod + choklad + vårfeeling = ❤️",
-    "hur kommer vädret bli på valborg": "Jag är ingen meteorolog, men oddsen säger: 40% regn, 60% hopp! Ta med paraply – och kanske solglasögon, för säkerhets skull. ☂️😎"
-    "hur firar programmerare valborg": "Vi firar Valborg med kod, förstås!\n\n```python\nprint('Glad Valborg!')\n```\n```javascript\nconsole.log('Glad Valborg!');\n```\n```rust\nprintln!(\"Glad Valborg!\");\n```",  # 👇 Ny fråga!
-    
+    "hur kommer vädret bli på valborg": "Jag är ingen meteorolog, men oddsen säger: 40% regn, 60% hopp! ☂️😎",
+    "hur firar programmerare valborg": "__kodfirande__"
 }
 
 user_input = st.text_input("Ställ din fråga:")
@@ -68,7 +66,13 @@ if user_input:
             bästa_match = nyckel
 
     if högsta_poäng >= 70:
-        st.success(valborg_svar[bästa_match])
+        if bästa_match == "__kodfirande__":
+            st.markdown("Vi firar Valborg med kod, förstås! 🎉🧑‍💻")
+            st.markdown("```python\nprint('Glad Valborg!')\n```")
+            st.markdown("```javascript\nconsole.log('Glad Valborg!');\n```")
+            st.markdown("```rust\nprintln!(\"Glad Valborg!\");\n```")
+        else:
+            st.success(valborg_svar[bästa_match])
     else:
         st.warning(
             "Jag är inte helt säker på vad du menar 🤔\n\n"

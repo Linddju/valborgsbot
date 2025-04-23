@@ -6,8 +6,23 @@ st.title("🔥 Valborgsbot – din digitala vårbrasa-guide")
 st.subheader("Vi lät AI fira Valborg – så här gick det... 😄")
 
 st.write("Fråga mig något om Valborg! Här är några exempel:")
-st.markdown("- När tänds brasan?\n- Var firas Valborg?\n- Varför firar vi Valborg?\n- Tips för att fira?\n- Vad händer i Uppsala på Valborg?\n- Är det tillåtet med fyrverkerier?\n- Vad betyder Valborg?\n- Hur var vädret på Valborg i fjol?")
-
+st.markdown("""
+- När tänds brasan?
+- Var firas Valborg?
+- Varför firar vi Valborg?
+- Tips för att fira?
+- Vad händer i Uppsala på Valborg?
+- Är det tillåtet med fyrverkerier?
+- Vad betyder Valborg?
+- Hur var vädret på Valborg i fjol?
+- Finns det Valborgsmat?
+- Hur firar studenter Valborg?
+- Kan man fira Valborg utomlands?
+- Måste man tända en brasa?
+- Har Valborg något med häxor att göra?
+- Vad är champagnegalopp?
+- Vad säger man på Valborg?
+""")
 
 valborg_svar = {
     # Ursprungliga

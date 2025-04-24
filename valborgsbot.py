@@ -8,7 +8,7 @@ st.subheader("Vi lät AI fira Valborg – så här gick det... 😄")
 
 st.write("Fråga mig något om Valborg! Jag kan mycket om traditioner, firande och historia. 🔥")
 st.markdown("""
-Här är exempel på fårgor du kan ställa:
+Här är exempel på frågor du kan ställa:
 - När tänds brasan på Valborg?
 - Var firas Valborg i Sverige?
 - Varför firar vi Valborg egentligen?
